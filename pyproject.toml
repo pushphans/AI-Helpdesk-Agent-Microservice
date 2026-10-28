@@ -1,0 +1,30 @@
+[project]
+name = "ai-helpdesk-agent-microservice"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "pushphans", email = "pushp.hans.official@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.20.1",
+    "asyncpg>=0.32.0",
+    "fastapi>=0.162.0",
+    "langchain>=1.4.7",
+    "langchain-google-genai>=4.4.2",
+    "langgraph>=1.2.18",
+    "pwdlib[argon2]>=0.3.1",
+    "pydantic-settings>=2.16.1",
+    "pydantic[email]>=2.14.1",
+    "pyjwt>=2.15.1",
+    "sqlalchemy[asyncio]>=2.1.6",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+ai-helpdesk-agent-microservice = "ai_helpdesk_agent_microservice:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"

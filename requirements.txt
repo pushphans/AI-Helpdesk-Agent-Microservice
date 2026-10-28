@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pydantic-settings
+pydantic[email]
+pwdlib[argon2]
+pyJWT
+sqlalchemy[asyncio]
+alembic
+asyncpg
+langchain
+langgraph
+langchain-google-genai
