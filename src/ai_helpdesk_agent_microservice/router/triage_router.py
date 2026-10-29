@@ -6,7 +6,8 @@ from fastapi import APIRouter, HTTPException
 
 triage_router = APIRouter(prefix="/ai", tags=["AI"])
 
-@triage_router.post("/tickets-analyze")
+
+@triage_router.post("/ticket-analyze")
 async def execute_run_workflow(
     data : TriageAgentRequestSchema,
     service_token : bool | None = Depends(check_service_auth)

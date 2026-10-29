@@ -1,4 +1,5 @@
 
+import uuid
 from ai_helpdesk_agent_microservice.utils.enums import TicketPriority
 from ai_helpdesk_agent_microservice.utils.enums import TicketStatus
 from pydantic import BaseModel
@@ -6,6 +7,7 @@ from pydantic import BaseModel
 
 
 class TriageAgentRequestSchema(BaseModel):
+    user_id : uuid.UUID
     title : str
     description : str
     status : TicketStatus
